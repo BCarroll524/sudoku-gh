@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
   currentRow = [];
   currentCol = [];
   currentNinth = [];
-  storedNumber: number = undefined;
+  currentValues = [];
   activePosition: number = undefined;
 
 
@@ -32,23 +32,21 @@ export class AppComponent implements OnInit {
 
   }
 
-  storeNumber(num: number): void {
-    this.storedNumber = num;
+  changePieceValue(num: number): void {
     if (this.validateRow(this.activePosition, num)
         && this.validateNinth(this.activePosition, num)
-        && this.validateCol(num)) {
+        && this.validateCol(num)
+        && !this.checkIfStarter(this.activePosition)) {
           this.board[this.activePosition] = num;
         }
   }
 
-  changeValue(num: number): void {
-    if (!this.checkIfStarter(num)) {
-      this.storedNumber = undefined;
-      this.activePosition = num;
-    }
+  selectPiece(num: number): void {
+    this.activePosition = num;
     this.getRow(num);
     this.getCol(num);
     this.getNinth(num);
+    this.getSameValues(num);
   }
 
   getBoard(): void {
@@ -123,6 +121,22 @@ export class AppComponent implements OnInit {
     }
   }
 
+  getSameValues(position: number): void {
+    this.currentValues = [];
+    const value = this.board[position];
+    if (value === '0') {
+      return;
+    }
+    // loop through board to find same values
+    this.board.forEach((data, index) => {
+      if (data === value && index !== position) {
+        this.currentValues.push(index);
+      }
+    });
+    console.log(this.currentValues);
+  }
+
+  // finds pieces in same ninth, row, and column
   isActivePiece(num: number): boolean {
     const pos = num;
     if (this.currentNinth.indexOf(pos) !== -1) {
@@ -138,7 +152,7 @@ export class AppComponent implements OnInit {
   validateRow(position: number, value: number): boolean {
     // check if current row has passed in value
     for (const i of this.currentRow) {
-      if (parseInt(this.board[i]) === value) {
+      if (parseInt(this.board[i], 10) === value) {
         return false;
       }
     }
@@ -149,7 +163,7 @@ export class AppComponent implements OnInit {
   validateNinth(position: number, value: number): boolean {
     // check if current ninth has passed in value
     for (const i of this.currentNinth) {
-      if(parseInt(this.board[i]) === value) {
+      if (parseInt(this.board[i], 10) === value) {
         return false;
       }
     }
@@ -158,12 +172,26 @@ export class AppComponent implements OnInit {
 
   validateCol(inputNum: number): boolean {
     for (const i of this.currentCol) {
-      if (parseInt(this.board[i]) === inputNum) {
+      if (parseInt(this.board[i], 10) === inputNum) {
         return false;
       }
     }
     return true;
   }
+
+  isActivePosition(position: number): boolean {
+    if (position === this.activePosition) {
+      return true;
+    }
+    return false;
+  }
+
+  isSameValue(position: number): boolean {
+    if (this.currentValues.indexOf(position) !== -1) {
+      return true;
+    }
+    return false;
+  }
 
 }
 

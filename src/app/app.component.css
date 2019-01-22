@@ -75,6 +75,7 @@
     font-size: 24px;
     margin-bottom: -25px;
     margin-top: 18px;
+    font-family: 'Courier New', Courier, monospace;
   }
   
   .starter {
@@ -86,5 +87,13 @@
   }
   
   .active-piece {
-    background-color: #E0E0E0;
+    background-color: rgb(224, 224, 224);
+  }
+
+  .active-pos {
+    background-color: rgb(158, 211, 241);
+  }
+
+  .same-val {
+    background-color: rgb(130, 182, 212);
   }
