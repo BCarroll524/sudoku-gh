@@ -97,3 +97,25 @@
   .same-val {
     background-color: rgb(130, 182, 212);
   }
+
+  .hud-wrapper-buttons {
+    display: flex;
+    padding-top: 15px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .hud-wrapper-buttons__button {
+    flex: 1;
+    font-size: 18px;
+    height: 35px;
+    border-radius: 12px;
+  }
+
+  .hud-wrapper-buttons__button:hover {
+    background-color: whitesmoke;
+  }
+
+  .hud-wrapper-buttons__button:focus {
+    outline: none;
+  }

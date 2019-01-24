@@ -37,7 +37,8 @@ export class AppComponent implements OnInit {
         && this.validateNinth(this.activePosition, num)
         && this.validateCol(num)
         && !this.checkIfStarter(this.activePosition)) {
-          this.board[this.activePosition] = num;
+          this.board[this.activePosition] = num.toString();
+          this.getSameValues(this.activePosition);
         }
   }
 
@@ -133,7 +134,6 @@ export class AppComponent implements OnInit {
         this.currentValues.push(index);
       }
     });
-    console.log(this.currentValues);
   }
 
   // finds pieces in same ninth, row, and column
