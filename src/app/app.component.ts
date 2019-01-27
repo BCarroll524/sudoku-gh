@@ -241,6 +241,12 @@ export class AppComponent implements OnInit {
     }
   }
 
+  onKeydown(event) {
+    if (event.keyCode >= 49 && event.keyCode <= 57) {
+      this.changePieceValue(parseInt(event.key, 10));
+    }
+  }
+
 }
 
 
