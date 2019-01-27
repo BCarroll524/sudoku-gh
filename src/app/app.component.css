@@ -98,6 +98,37 @@
     background-color: rgb(130, 182, 212);
   }
 
+  .is-conflict {
+    background-color: lightcoral;
+  }
+
+  .piece-wiggle {
+    animation: 2s wiggle ease;
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(-3deg);
+      box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    }
+    20% {
+      transform: rotate(20deg);
+    }
+    40% {
+      transform: rotate(-15deg);
+    }
+    60% {
+      transform: rotate(5deg);
+    }
+    90% {
+      transform: rotate(-1deg);
+    }
+    100% {
+      transform: rotate(0);
+      box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    }
+  }
+
   .hud-wrapper-buttons {
     display: flex;
     padding-top: 15px;
