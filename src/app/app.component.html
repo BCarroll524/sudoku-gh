@@ -3,184 +3,184 @@
   <div class="hud-wrapper">
     <div class="hud-wrapper__board">
       <div class="hud-wrapper__board_ninth">
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(0),'active-pos': isActivePosition(0), 'active-piece': isActivePiece(0)}" (click)="selectPiece(0)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(0), 'piece-wiggle': wiggle(0), 'same-val': isSameValue(0),'active-pos': isActivePosition(0), 'active-piece': isActivePiece(0)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(0)" >
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(0), 'starter': checkIfStarter(0)}">{{ board[0] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(1),'active-pos': isActivePosition(1), 'active-piece': isActivePiece(1)}" (click)="selectPiece(1)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(1), 'piece-wiggle': wiggle(1), 'same-val': isSameValue(1),'active-pos': isActivePosition(1), 'active-piece': isActivePiece(1)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(1)" >
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(1), 'starter': checkIfStarter(1)}">{{ board[1] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(2),'active-pos': isActivePosition(2), 'active-piece': isActivePiece(2)}" (click)="selectPiece(2)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(2), 'piece-wiggle': wiggle(2), 'same-val': isSameValue(2),'active-pos': isActivePosition(2), 'active-piece': isActivePiece(2)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(2)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(2), 'starter': checkIfStarter(2)}">{{ board[2] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(9),'active-pos': isActivePosition(9), 'active-piece': isActivePiece(9)}" (click)="selectPiece(9)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(9), 'piece-wiggle': wiggle(9), 'same-val': isSameValue(9),'active-pos': isActivePosition(9), 'active-piece': isActivePiece(9)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(9)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(9), 'starter': checkIfStarter(9)}">{{ board[9] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(10),'active-pos': isActivePosition(10), 'active-piece': isActivePiece(10)}" (click)="selectPiece(10)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(10), 'piece-wiggle': wiggle(10), 'same-val': isSameValue(10),'active-pos': isActivePosition(10), 'active-piece': isActivePiece(10)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(10)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(10), 'starter': checkIfStarter(10)}">{{ board[10] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(11),'active-pos': isActivePosition(11), 'active-piece': isActivePiece(11)}" (click)="selectPiece(11)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(11), 'piece-wiggle': wiggle(11), 'same-val': isSameValue(11),'active-pos': isActivePosition(11), 'active-piece': isActivePiece(11)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(11)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(11), 'starter': checkIfStarter(11)}">{{ board[11] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(18),'active-pos': isActivePosition(18), 'active-piece': isActivePiece(18)}" (click)="selectPiece(18)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(18), 'piece-wiggle': wiggle(18), 'same-val': isSameValue(18),'active-pos': isActivePosition(18), 'active-piece': isActivePiece(18)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(18)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(18), 'starter': checkIfStarter(18)}">{{ board[18] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(19),'active-pos': isActivePosition(19), 'active-piece': isActivePiece(19)}" (click)="selectPiece(19)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(19), 'piece-wiggle': wiggle(19), 'same-val': isSameValue(19),'active-pos': isActivePosition(19), 'active-piece': isActivePiece(19)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(19)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(19), 'starter': checkIfStarter(19)}">{{ board[19] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(20),'active-pos': isActivePosition(20), 'active-piece': isActivePiece(20)}" (click)="selectPiece(20)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(20), 'piece-wiggle': wiggle(20), 'same-val': isSameValue(20),'active-pos': isActivePosition(20), 'active-piece': isActivePiece(20)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(20)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(20), 'starter': checkIfStarter(20)}">{{ board[20] }}</div></div>
       </div>
       <div class="hud-wrapper__board_ninth">
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(3),'active-pos': isActivePosition(3), 'active-piece': isActivePiece(3)}" (click)="selectPiece(3)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(3), 'piece-wiggle': wiggle(3), 'same-val': isSameValue(3),'active-pos': isActivePosition(3), 'active-piece': isActivePiece(3)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(3)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(3), 'starter': checkIfStarter(3)}">{{ board[3] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(4),'active-pos': isActivePosition(4), 'active-piece': isActivePiece(4)}" (click)="selectPiece(4)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(4), 'piece-wiggle': wiggle(4), 'same-val': isSameValue(4),'active-pos': isActivePosition(4), 'active-piece': isActivePiece(4)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(4)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(4), 'starter': checkIfStarter(4)}">{{ board[4] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(5),'active-pos': isActivePosition(5), 'active-piece': isActivePiece(5)}" (click)="selectPiece(5)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(5), 'piece-wiggle': wiggle(5), 'same-val': isSameValue(5),'active-pos': isActivePosition(5), 'active-piece': isActivePiece(5)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(5)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(5), 'starter': checkIfStarter(5)}">{{ board[5] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(12),'active-pos': isActivePosition(12), 'active-piece': isActivePiece(12)}" (click)="selectPiece(12)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(12), 'piece-wiggle': wiggle(12), 'same-val': isSameValue(12),'active-pos': isActivePosition(12), 'active-piece': isActivePiece(12)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(12)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(12), 'starter': checkIfStarter(12)}">{{ board[12] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(13),'active-pos': isActivePosition(13), 'active-piece': isActivePiece(13)}" (click)="selectPiece(13)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(13), 'piece-wiggle': wiggle(13), 'same-val': isSameValue(13),'active-pos': isActivePosition(13), 'active-piece': isActivePiece(13)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(13)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(13), 'starter': checkIfStarter(13)}">{{ board[13] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(14),'active-pos': isActivePosition(14), 'active-piece': isActivePiece(14)}" (click)="selectPiece(14)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(14), 'piece-wiggle': wiggle(14), 'same-val': isSameValue(14),'active-pos': isActivePosition(14), 'active-piece': isActivePiece(14)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(14)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(14), 'starter': checkIfStarter(14)}">{{ board[14] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(21),'active-pos': isActivePosition(21), 'active-piece': isActivePiece(21)}" (click)="selectPiece(21)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(21), 'piece-wiggle': wiggle(21), 'same-val': isSameValue(21),'active-pos': isActivePosition(21), 'active-piece': isActivePiece(21)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(21)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(21), 'starter': checkIfStarter(21)}">{{ board[21] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(22),'active-pos': isActivePosition(22), 'active-piece': isActivePiece(22)}" (click)="selectPiece(22)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(22), 'piece-wiggle': wiggle(22), 'same-val': isSameValue(22),'active-pos': isActivePosition(22), 'active-piece': isActivePiece(22)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(22)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(22), 'starter': checkIfStarter(22)}">{{ board[22] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(23),'active-pos': isActivePosition(23), 'active-piece': isActivePiece(23)}" (click)="selectPiece(23)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(23), 'piece-wiggle': wiggle(23), 'same-val': isSameValue(23),'active-pos': isActivePosition(23), 'active-piece': isActivePiece(23)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(23)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(23), 'starter': checkIfStarter(23)}">{{ board[23] }}</div></div>
       </div> 
       <div class="hud-wrapper__board_ninth">
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(6),'active-pos': isActivePosition(6), 'active-piece': isActivePiece(6)}" (click)="selectPiece(6)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(6), 'piece-wiggle': wiggle(6), 'same-val': isSameValue(6),'active-pos': isActivePosition(6), 'active-piece': isActivePiece(6)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(6)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(6), 'starter': checkIfStarter(6)}">{{ board[6] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(7),'active-pos': isActivePosition(7), 'active-piece': isActivePiece(7)}" (click)="selectPiece(7)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(7), 'piece-wiggle': wiggle(7), 'same-val': isSameValue(7),'active-pos': isActivePosition(7), 'active-piece': isActivePiece(7)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(7)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(7), 'starter': checkIfStarter(7)}">{{ board[7] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(8),'active-pos': isActivePosition(8), 'active-piece': isActivePiece(8)}" (click)="selectPiece(8)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(8), 'piece-wiggle': wiggle(8), 'same-val': isSameValue(8),'active-pos': isActivePosition(8), 'active-piece': isActivePiece(8)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(8)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(8), 'starter': checkIfStarter(8)}">{{ board[8] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(15),'active-pos': isActivePosition(15), 'active-piece': isActivePiece(15)}" (click)="selectPiece(15)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(15), 'piece-wiggle': wiggle(15), 'same-val': isSameValue(15),'active-pos': isActivePosition(15), 'active-piece': isActivePiece(15)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(15)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(15), 'starter': checkIfStarter(15)}">{{ board[15] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(16),'active-pos': isActivePosition(16), 'active-piece': isActivePiece(16)}" (click)="selectPiece(16)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(16), 'piece-wiggle': wiggle(16), 'same-val': isSameValue(16),'active-pos': isActivePosition(16), 'active-piece': isActivePiece(16)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(16)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(16), 'starter': checkIfStarter(16)}">{{ board[16] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(17),'active-pos': isActivePosition(17), 'active-piece': isActivePiece(17)}" (click)="selectPiece(17)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(17), 'piece-wiggle': wiggle(17), 'same-val': isSameValue(17),'active-pos': isActivePosition(17), 'active-piece': isActivePiece(17)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(17)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(17), 'starter': checkIfStarter(17)}">{{ board[17] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(24),'active-pos': isActivePosition(24), 'active-piece': isActivePiece(24)}" (click)="selectPiece(24)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(24), 'piece-wiggle': wiggle(24), 'same-val': isSameValue(24),'active-pos': isActivePosition(24), 'active-piece': isActivePiece(24)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(24)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(24), 'starter': checkIfStarter(24)}">{{ board[24] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(25),'active-pos': isActivePosition(25), 'active-piece': isActivePiece(25)}" (click)="selectPiece(25)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(25), 'piece-wiggle': wiggle(25), 'same-val': isSameValue(25),'active-pos': isActivePosition(25), 'active-piece': isActivePiece(25)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(25)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(25), 'starter': checkIfStarter(25)}">{{ board[25] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(26),'active-pos': isActivePosition(26), 'active-piece': isActivePiece(26)}" (click)="selectPiece(26)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(26), 'piece-wiggle': wiggle(26), 'same-val': isSameValue(26),'active-pos': isActivePosition(26), 'active-piece': isActivePiece(26)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(26)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(26), 'starter': checkIfStarter(26)}">{{ board[26] }}</div></div>
       </div> 
       <div class="hud-wrapper__board_ninth">
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(27),'active-pos': isActivePosition(27), 'active-piece': isActivePiece(27)}" (click)="selectPiece(27)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(27), 'piece-wiggle': wiggle(27), 'same-val': isSameValue(27),'active-pos': isActivePosition(27), 'active-piece': isActivePiece(27)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(27)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(27), 'starter': checkIfStarter(27)}">{{ board[27] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(28),'active-pos': isActivePosition(28), 'active-piece': isActivePiece(28)}" (click)="selectPiece(28)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(28), 'piece-wiggle': wiggle(28), 'same-val': isSameValue(28),'active-pos': isActivePosition(28), 'active-piece': isActivePiece(28)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(28)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(28), 'starter': checkIfStarter(28)}">{{ board[28] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(29),'active-pos': isActivePosition(29), 'active-piece': isActivePiece(29)}" (click)="selectPiece(29)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(29), 'piece-wiggle': wiggle(29), 'same-val': isSameValue(29),'active-pos': isActivePosition(29), 'active-piece': isActivePiece(29)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(29)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(29), 'starter': checkIfStarter(29)}">{{ board[29] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(36),'active-pos': isActivePosition(36), 'active-piece': isActivePiece(36)}" (click)="selectPiece(36)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(36), 'piece-wiggle': wiggle(36), 'same-val': isSameValue(36),'active-pos': isActivePosition(36), 'active-piece': isActivePiece(36)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(36)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(36), 'starter': checkIfStarter(36)}">{{ board[36] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(37),'active-pos': isActivePosition(37), 'active-piece': isActivePiece(37)}" (click)="selectPiece(37)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(37), 'piece-wiggle': wiggle(37), 'same-val': isSameValue(37),'active-pos': isActivePosition(37), 'active-piece': isActivePiece(37)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(37)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(37), 'starter': checkIfStarter(37)}">{{ board[37] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(38),'active-pos': isActivePosition(38), 'active-piece': isActivePiece(38)}" (click)="selectPiece(38)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(38), 'piece-wiggle': wiggle(38), 'same-val': isSameValue(38),'active-pos': isActivePosition(38), 'active-piece': isActivePiece(38)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(38)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(38), 'starter': checkIfStarter(38)}">{{ board[38] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(45),'active-pos': isActivePosition(45), 'active-piece': isActivePiece(45)}" (click)="selectPiece(45)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(45), 'piece-wiggle': wiggle(45), 'same-val': isSameValue(45),'active-pos': isActivePosition(45), 'active-piece': isActivePiece(45)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(45)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(45), 'starter': checkIfStarter(45)}">{{ board[45] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(46),'active-pos': isActivePosition(46), 'active-piece': isActivePiece(46)}" (click)="selectPiece(46)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(46), 'piece-wiggle': wiggle(46), 'same-val': isSameValue(46),'active-pos': isActivePosition(46), 'active-piece': isActivePiece(46)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(46)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(46), 'starter': checkIfStarter(46)}">{{ board[46] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(47),'active-pos': isActivePosition(47), 'active-piece': isActivePiece(47)}" (click)="selectPiece(47)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(47), 'piece-wiggle': wiggle(47), 'same-val': isSameValue(47),'active-pos': isActivePosition(47), 'active-piece': isActivePiece(47)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(47)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(47), 'starter': checkIfStarter(47)}">{{ board[47] }}</div></div>
       </div>
       <div class="hud-wrapper__board_ninth">
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(30),'active-pos': isActivePosition(30), 'active-piece': isActivePiece(30)}" (click)="selectPiece(30)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(30), 'piece-wiggle': wiggle(30), 'same-val': isSameValue(30),'active-pos': isActivePosition(30), 'active-piece': isActivePiece(30)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(30)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(30), 'starter': checkIfStarter(30)}">{{ board[30] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(31),'active-pos': isActivePosition(31), 'active-piece': isActivePiece(31)}" (click)="selectPiece(31)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(31), 'piece-wiggle': wiggle(31), 'same-val': isSameValue(31),'active-pos': isActivePosition(31), 'active-piece': isActivePiece(31)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(31)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(31), 'starter': checkIfStarter(31)}">{{ board[31] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(32),'active-pos': isActivePosition(32), 'active-piece': isActivePiece(32)}" (click)="selectPiece(32)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(32), 'piece-wiggle': wiggle(32), 'same-val': isSameValue(32),'active-pos': isActivePosition(32), 'active-piece': isActivePiece(32)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(32)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(32), 'starter': checkIfStarter(32)}">{{ board[32] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(39),'active-pos': isActivePosition(39), 'active-piece': isActivePiece(39)}" (click)="selectPiece(39)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(39), 'piece-wiggle': wiggle(39), 'same-val': isSameValue(39),'active-pos': isActivePosition(39), 'active-piece': isActivePiece(39)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(39)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(39), 'starter': checkIfStarter(39)}">{{ board[39] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(40),'active-pos': isActivePosition(40), 'active-piece': isActivePiece(40)}" (click)="selectPiece(40)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(40), 'piece-wiggle': wiggle(40), 'same-val': isSameValue(40),'active-pos': isActivePosition(40), 'active-piece': isActivePiece(40)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(40)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(40), 'starter': checkIfStarter(40)}">{{ board[40] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(41),'active-pos': isActivePosition(41), 'active-piece': isActivePiece(41)}" (click)="selectPiece(41)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(41), 'piece-wiggle': wiggle(41), 'same-val': isSameValue(41),'active-pos': isActivePosition(41), 'active-piece': isActivePiece(41)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(41)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(41), 'starter': checkIfStarter(41)}">{{ board[41] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(48),'active-pos': isActivePosition(48), 'active-piece': isActivePiece(48)}" (click)="selectPiece(48)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(48), 'piece-wiggle': wiggle(48), 'same-val': isSameValue(48),'active-pos': isActivePosition(48), 'active-piece': isActivePiece(48)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(48)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(48), 'starter': checkIfStarter(48)}">{{ board[48] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(49),'active-pos': isActivePosition(49), 'active-piece': isActivePiece(49)}" (click)="selectPiece(49)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(49), 'piece-wiggle': wiggle(49), 'same-val': isSameValue(49),'active-pos': isActivePosition(49), 'active-piece': isActivePiece(49)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(49)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(49), 'starter': checkIfStarter(49)}">{{ board[49] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(50),'active-pos': isActivePosition(50), 'active-piece': isActivePiece(50)}" (click)="selectPiece(50)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(50), 'piece-wiggle': wiggle(50), 'same-val': isSameValue(50),'active-pos': isActivePosition(50), 'active-piece': isActivePiece(50)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(50)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(50), 'starter': checkIfStarter(50)}">{{ board[50] }}</div></div>
       </div> 
       <div class="hud-wrapper__board_ninth">
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(33),'active-pos': isActivePosition(33), 'active-piece': isActivePiece(33)}" (click)="selectPiece(33)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(33), 'piece-wiggle': wiggle(33), 'same-val': isSameValue(33),'active-pos': isActivePosition(33), 'active-piece': isActivePiece(33)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(33)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(33), 'starter': checkIfStarter(33)}">{{ board[33] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(34),'active-pos': isActivePosition(34), 'active-piece': isActivePiece(34)}" (click)="selectPiece(34)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(34), 'piece-wiggle': wiggle(34), 'same-val': isSameValue(34),'active-pos': isActivePosition(34), 'active-piece': isActivePiece(34)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(34)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(34), 'starter': checkIfStarter(34)}">{{ board[34] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(35),'active-pos': isActivePosition(35), 'active-piece': isActivePiece(35)}" (click)="selectPiece(35)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(35), 'piece-wiggle': wiggle(35), 'same-val': isSameValue(35),'active-pos': isActivePosition(35), 'active-piece': isActivePiece(35)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(35)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(35), 'starter': checkIfStarter(35)}">{{ board[35] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(42),'active-pos': isActivePosition(42), 'active-piece': isActivePiece(42)}" (click)="selectPiece(42)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(42), 'piece-wiggle': wiggle(42), 'same-val': isSameValue(42),'active-pos': isActivePosition(42), 'active-piece': isActivePiece(42)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(42)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(42), 'starter': checkIfStarter(42)}">{{ board[42] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(43),'active-pos': isActivePosition(43), 'active-piece': isActivePiece(43)}" (click)="selectPiece(43)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(43), 'piece-wiggle': wiggle(43), 'same-val': isSameValue(43),'active-pos': isActivePosition(43), 'active-piece': isActivePiece(43)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(43)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(43), 'starter': checkIfStarter(43)}">{{ board[43] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(44),'active-pos': isActivePosition(44), 'active-piece': isActivePiece(44)}" (click)="selectPiece(44)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(50), 'piece-wiggle': wiggle(44), 'same-val': isSameValue(44),'active-pos': isActivePosition(44), 'active-piece': isActivePiece(44)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(44)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(44), 'starter': checkIfStarter(44)}">{{ board[44] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(51),'active-pos': isActivePosition(51), 'active-piece': isActivePiece(51)}" (click)="selectPiece(51)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(51), 'piece-wiggle': wiggle(51), 'same-val': isSameValue(51),'active-pos': isActivePosition(51), 'active-piece': isActivePiece(51)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(51)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(51), 'starter': checkIfStarter(51)}">{{ board[51] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(52),'active-pos': isActivePosition(52), 'active-piece': isActivePiece(52)}" (click)="selectPiece(52)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(52), 'piece-wiggle': wiggle(52), 'same-val': isSameValue(52),'active-pos': isActivePosition(52), 'active-piece': isActivePiece(52)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(52)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(52), 'starter': checkIfStarter(52)}">{{ board[52] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(53),'active-pos': isActivePosition(53), 'active-piece': isActivePiece(53)}" (click)="selectPiece(53)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(53), 'piece-wiggle': wiggle(53), 'same-val': isSameValue(53),'active-pos': isActivePosition(53), 'active-piece': isActivePiece(53)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(53)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(53), 'starter': checkIfStarter(53)}">{{ board[53] }}</div></div>
       </div>
       <div class="hud-wrapper__board_ninth">
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(54),'active-pos': isActivePosition(54), 'active-piece': isActivePiece(54)}" (click)="selectPiece(54)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(54), 'piece-wiggle': wiggle(54), 'same-val': isSameValue(54),'active-pos': isActivePosition(54), 'active-piece': isActivePiece(54)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(54)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(54), 'starter': checkIfStarter(54)}">{{ board[54] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(55),'active-pos': isActivePosition(55), 'active-piece': isActivePiece(55)}" (click)="selectPiece(55)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(55), 'piece-wiggle': wiggle(55), 'same-val': isSameValue(55),'active-pos': isActivePosition(55), 'active-piece': isActivePiece(55)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(55)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(55), 'starter': checkIfStarter(55)}">{{ board[55] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(56),'active-pos': isActivePosition(56), 'active-piece': isActivePiece(56)}" (click)="selectPiece(56)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(56), 'piece-wiggle': wiggle(56), 'same-val': isSameValue(56),'active-pos': isActivePosition(56), 'active-piece': isActivePiece(56)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(56)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(56), 'starter': checkIfStarter(56)}">{{ board[56] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(63),'active-pos': isActivePosition(63), 'active-piece': isActivePiece(63)}" (click)="selectPiece(63)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(63), 'piece-wiggle': wiggle(63), 'same-val': isSameValue(63),'active-pos': isActivePosition(63), 'active-piece': isActivePiece(63)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(63)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(63), 'starter': checkIfStarter(63)}">{{ board[63] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(64),'active-pos': isActivePosition(64), 'active-piece': isActivePiece(64)}" (click)="selectPiece(64)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(64), 'piece-wiggle': wiggle(64), 'same-val': isSameValue(64),'active-pos': isActivePosition(64), 'active-piece': isActivePiece(64)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(64)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(64), 'starter': checkIfStarter(64)}">{{ board[64] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(65),'active-pos': isActivePosition(65), 'active-piece': isActivePiece(65)}" (click)="selectPiece(65)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(65), 'piece-wiggle': wiggle(65), 'same-val': isSameValue(65),'active-pos': isActivePosition(65), 'active-piece': isActivePiece(65)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(65)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(65), 'starter': checkIfStarter(65)}">{{ board[65] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(72),'active-pos': isActivePosition(72), 'active-piece': isActivePiece(72)}" (click)="selectPiece(72)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(72), 'piece-wiggle': wiggle(72), 'same-val': isSameValue(72),'active-pos': isActivePosition(72), 'active-piece': isActivePiece(72)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(72)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(72), 'starter': checkIfStarter(72)}">{{ board[72] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(73),'active-pos': isActivePosition(73), 'active-piece': isActivePiece(73)}" (click)="selectPiece(73)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(73), 'piece-wiggle': wiggle(73), 'same-val': isSameValue(73),'active-pos': isActivePosition(73), 'active-piece': isActivePiece(73)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(73)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(73), 'starter': checkIfStarter(73)}">{{ board[73] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(74),'active-pos': isActivePosition(74), 'active-piece': isActivePiece(74)}" (click)="selectPiece(74)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(74), 'piece-wiggle': wiggle(74), 'same-val': isSameValue(74),'active-pos': isActivePosition(74), 'active-piece': isActivePiece(74)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(74)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(74), 'starter': checkIfStarter(74)}">{{ board[74] }}</div></div>
         
       </div>
       <div class="hud-wrapper__board_ninth">
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(57),'active-pos': isActivePosition(57), 'active-piece': isActivePiece(57)}" (click)="selectPiece(57)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(57), 'piece-wiggle': wiggle(57), 'same-val': isSameValue(57),'active-pos': isActivePosition(57), 'active-piece': isActivePiece(57)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(57)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(57), 'starter': checkIfStarter(57)}">{{ board[57] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(58),'active-pos': isActivePosition(58), 'active-piece': isActivePiece(58)}" (click)="selectPiece(58)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(58), 'piece-wiggle': wiggle(58), 'same-val': isSameValue(58),'active-pos': isActivePosition(58), 'active-piece': isActivePiece(58)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(58)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(58), 'starter': checkIfStarter(58)}">{{ board[58] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(59),'active-pos': isActivePosition(59), 'active-piece': isActivePiece(59)}" (click)="selectPiece(59)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(59), 'piece-wiggle': wiggle(59), 'same-val': isSameValue(59),'active-pos': isActivePosition(59), 'active-piece': isActivePiece(59)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(59)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(59), 'starter': checkIfStarter(59)}">{{ board[59] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(66),'active-pos': isActivePosition(66), 'active-piece': isActivePiece(66)}" (click)="selectPiece(66)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(66), 'piece-wiggle': wiggle(66), 'same-val': isSameValue(66),'active-pos': isActivePosition(66), 'active-piece': isActivePiece(66)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(66)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(66), 'starter': checkIfStarter(66)}">{{ board[66] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(67),'active-pos': isActivePosition(67), 'active-piece': isActivePiece(67)}" (click)="selectPiece(67)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(67), 'piece-wiggle': wiggle(67), 'same-val': isSameValue(67),'active-pos': isActivePosition(67), 'active-piece': isActivePiece(67)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(67)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(67), 'starter': checkIfStarter(67)}">{{ board[67] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(68),'active-pos': isActivePosition(68), 'active-piece': isActivePiece(68)}" (click)="selectPiece(68)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(68), 'piece-wiggle': wiggle(68), 'same-val': isSameValue(68),'active-pos': isActivePosition(68), 'active-piece': isActivePiece(68)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(68)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(68), 'starter': checkIfStarter(68)}">{{ board[68] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(75),'active-pos': isActivePosition(75), 'active-piece': isActivePiece(75)}" (click)="selectPiece(75)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(75), 'piece-wiggle': wiggle(75), 'same-val': isSameValue(75),'active-pos': isActivePosition(75), 'active-piece': isActivePiece(75)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(75)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(75), 'starter': checkIfStarter(75)}">{{ board[75] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(76),'active-pos': isActivePosition(76), 'active-piece': isActivePiece(76)}" (click)="selectPiece(76)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(76), 'piece-wiggle': wiggle(76), 'same-val': isSameValue(76),'active-pos': isActivePosition(76), 'active-piece': isActivePiece(76)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(76)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(76), 'starter': checkIfStarter(76)}">{{ board[76] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(77),'active-pos': isActivePosition(77), 'active-piece': isActivePiece(77)}" (click)="selectPiece(77)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(77), 'piece-wiggle': wiggle(77), 'same-val': isSameValue(77),'active-pos': isActivePosition(77), 'active-piece': isActivePiece(77)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(77)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(77), 'starter': checkIfStarter(77)}">{{ board[77] }}</div></div>
       </div> 
       <div class="hud-wrapper__board_ninth">
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(60),'active-pos': isActivePosition(60), 'active-piece': isActivePiece(60)}" (click)="selectPiece(60)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(60), 'piece-wiggle': wiggle(60), 'same-val': isSameValue(60),'active-pos': isActivePosition(60), 'active-piece': isActivePiece(60)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(60)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(60), 'starter': checkIfStarter(60)}">{{ board[60] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(61),'active-pos': isActivePosition(61), 'active-piece': isActivePiece(61)}" (click)="selectPiece(61)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(61), 'piece-wiggle': wiggle(61), 'same-val': isSameValue(61),'active-pos': isActivePosition(61), 'active-piece': isActivePiece(61)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(61)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(61), 'starter': checkIfStarter(61)}">{{ board[61] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(62),'active-pos': isActivePosition(62), 'active-piece': isActivePiece(62)}" (click)="selectPiece(62)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(62), 'piece-wiggle': wiggle(62), 'same-val': isSameValue(62),'active-pos': isActivePosition(62), 'active-piece': isActivePiece(62)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(62)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(62), 'starter': checkIfStarter(62)}">{{ board[62] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(69),'active-pos': isActivePosition(69), 'active-piece': isActivePiece(69)}" (click)="selectPiece(69)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(69), 'piece-wiggle': wiggle(69), 'same-val': isSameValue(69),'active-pos': isActivePosition(69), 'active-piece': isActivePiece(69)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(69)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(69), 'starter': checkIfStarter(69)}">{{ board[69] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(70),'active-pos': isActivePosition(70), 'active-piece': isActivePiece(70)}" (click)="selectPiece(70)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(70), 'piece-wiggle': wiggle(70), 'same-val': isSameValue(70),'active-pos': isActivePosition(70), 'active-piece': isActivePiece(70)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(70)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(70), 'starter': checkIfStarter(70)}">{{ board[70] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(71),'active-pos': isActivePosition(71), 'active-piece': isActivePiece(71)}" (click)="selectPiece(71)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(71), 'piece-wiggle': wiggle(71), 'same-val': isSameValue(71),'active-pos': isActivePosition(71), 'active-piece': isActivePiece(71)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(71)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(71), 'starter': checkIfStarter(71)}">{{ board[71] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(78),'active-pos': isActivePosition(78), 'active-piece': isActivePiece(78)}" (click)="selectPiece(78)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(78), 'piece-wiggle': wiggle(78), 'same-val': isSameValue(78),'active-pos': isActivePosition(78), 'active-piece': isActivePiece(78)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(78)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(78), 'starter': checkIfStarter(78)}">{{ board[78] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(79),'active-pos': isActivePosition(79), 'active-piece': isActivePiece(79)}" (click)="selectPiece(79)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(79), 'piece-wiggle': wiggle(79), 'same-val': isSameValue(79),'active-pos': isActivePosition(79), 'active-piece': isActivePiece(79)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(79)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(79), 'starter': checkIfStarter(79)}">{{ board[79] }}</div></div>
-        <div class="hud-wrapper__board_piece" [ngClass]="{'same-val': isSameValue(80),'active-pos': isActivePosition(80), 'active-piece': isActivePiece(80)}" (click)="selectPiece(80)">
+        <div class="hud-wrapper__board_piece" [ngClass]="{'is-conflict': isConflict(80), 'piece-wiggle': wiggle(80), 'same-val': isSameValue(80),'active-pos': isActivePosition(80), 'active-piece': isActivePiece(80)}" tabindex="0" (keydown)="onKeydown($event)" (click)="selectPiece(80)">
           <div [ngClass]="{'text': true, 'empty': checkIfEmpty(80), 'starter': checkIfStarter(80)}">{{ board[80] }}</div></div>
       </div>
     </div>

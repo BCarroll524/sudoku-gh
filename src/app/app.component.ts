@@ -17,6 +17,7 @@ export class AppComponent implements OnInit {
   currentCol = [];
   currentNinth = [];
   currentValues = [];
+  conflictingPieces = [];
   activePosition: number = undefined;
 
 
@@ -33,13 +34,15 @@ export class AppComponent implements OnInit {
   }
 
   changePieceValue(num: number): void {
-    if (this.validateRow(this.activePosition, num)
-        && this.validateNinth(this.activePosition, num)
-        && this.validateCol(num)
-        && !this.checkIfStarter(this.activePosition)) {
+    if (!this.checkIfStarter(this.activePosition)
+        && this.validate(this.activePosition, num)) {
+          this.removeConflictingPieces(this.activePosition);
           this.board[this.activePosition] = num.toString();
           this.getSameValues(this.activePosition);
-        }
+    } else {
+      this.board[this.activePosition] = num.toString();
+      this.currentValues = [];
+    }
   }
 
   selectPiece(num: number): void {
@@ -152,7 +155,9 @@ export class AppComponent implements OnInit {
   validateRow(position: number, value: number): boolean {
     // check if current row has passed in value
     for (const i of this.currentRow) {
-      if (parseInt(this.board[i], 10) === value) {
+      if (parseInt(this.board[i], 10) === value
+            && this.conflictingPieces.indexOf(i) === -1) {
+        this.conflictingPieces.push(i);
         return false;
       }
     }
@@ -163,21 +168,37 @@ export class AppComponent implements OnInit {
   validateNinth(position: number, value: number): boolean {
     // check if current ninth has passed in value
     for (const i of this.currentNinth) {
-      if (parseInt(this.board[i], 10) === value) {
+      if (parseInt(this.board[i], 10) === value
+            && this.conflictingPieces.indexOf(i) === -1) {
+        this.conflictingPieces.push(i);
         return false;
       }
     }
     return true;
   }
 
-  validateCol(inputNum: number): boolean {
+  validateCol(position: number, value: number): boolean {
     for (const i of this.currentCol) {
-      if (parseInt(this.board[i], 10) === inputNum) {
+      if (parseInt(this.board[i], 10) === value
+            && this.conflictingPieces.indexOf(i) === -1) {
+        this.conflictingPieces.push(i);
         return false;
       }
     }
     return true;
   }
+
+  validate(pos: number, val: number): boolean {
+    const col = this.validateCol(pos, val);
+    const row = this.validateRow(pos, val);
+    const ninth = this.validateNinth(pos, val);
+    if (col && row && ninth) {
+      return true;
+    }
+
+    this.conflictingPieces.push(pos);
+    return false;
+  }
 
   isActivePosition(position: number): boolean {
     if (position === this.activePosition) {
@@ -191,6 +212,39 @@ export class AppComponent implements OnInit {
       return true;
     }
     return false;
+  }
+
+  isConflict(position: number): boolean {
+    if (this.conflictingPieces.indexOf(position) !== -1) {
+      return true;
+    }
+    return false;
+  }
+
+  wiggle(pos: number): boolean {
+    if (this.activePosition === pos && this.conflictingPieces.indexOf(pos) !== -1) {
+      return true;
+    }
+    return false;
+  }
+
+  removeConflictingPieces(pos: number): void {
+    const array = [];
+    for (const i of this.conflictingPieces) {
+      if (this.board[i] === this.board[pos]) {
+        array.push(i);
+      }
+    }
+    for (const i of array) {
+      const index = this.conflictingPieces.indexOf(i);
+      this.conflictingPieces.splice(index, 1);
+    }
+  }
+
+  onKeydown(event) {
+    if (event.keyCode >= 49 && event.keyCode <= 57) {
+      this.changePieceValue(parseInt(event.key, 10));
+    }
   }
 
 }
