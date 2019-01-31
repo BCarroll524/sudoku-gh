@@ -104,6 +104,7 @@
 
   .piece-wiggle {
     animation: 2s wiggle ease;
+    outline: none;
   }
 
   @keyframes wiggle {

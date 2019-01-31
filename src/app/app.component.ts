@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Move } from './models/moves';
 
 import { SudokuService } from '../services/sudoku.service';
+import { Type } from '@angular/compiler';
 
 
 @Component({
@@ -19,11 +20,11 @@ export class AppComponent implements OnInit {
   currentValues = [];
   conflictingPieces = [];
   activePosition: number = undefined;
+  moves: Array<Move> = [];
 
 
 
   constructor(
-    private http: HttpClient,
     private service: SudokuService,
   ) {}
 
@@ -43,6 +44,15 @@ export class AppComponent implements OnInit {
       this.board[this.activePosition] = num.toString();
       this.currentValues = [];
     }
+    this.addToMoves(this.activePosition, num);
+  }
+
+  addToMoves(pos: number, value: number): void {
+    const move = {position: -1, value: -1};
+    move.position = pos;
+    move.value = value;
+    this.moves.push(move);
+    console.log(this.moves);
   }
 
   selectPiece(num: number): void {
@@ -67,7 +77,6 @@ export class AppComponent implements OnInit {
           counter++;
         }
       }
-      console.log(this.board);
     });
   }
 
@@ -245,6 +254,42 @@ export class AppComponent implements OnInit {
     if (event.keyCode >= 49 && event.keyCode <= 57) {
       this.changePieceValue(parseInt(event.key, 10));
     }
+  }
+
+  newGame(): void {
+    // restart game with new board
+    // clear board and all numbers
+    this.board = [];
+    this.starters = [];
+    this.currentCol = [];
+    this.currentNinth = [];
+    this.currentRow = [];
+    this.currentValues = [];
+    this.conflictingPieces = [];
+    this.activePosition = undefined;
+    this.getBoard();
+  }
+
+  undoMove(): void {
+    const move: Move = this.moves.pop();
+    const pos = move.position;
+    let index = -1;
+    this.moves.forEach((m, i) => {
+      if (m.position === pos) {
+        index = i;
+      }
+    });
+    this.removeConflictingPieces(pos);
+    if (index > 0) {
+      this.board[pos] = this.moves[index].value.toString();
+    } else {
+      this.board[pos] = '0';
+      const i = this.currentValues.indexOf(pos);
+      if (i >= 0) {
+        this.currentValues.splice(i, 1);
+      }
+    }
+    console.log(this.currentValues);
   }
 
 }
